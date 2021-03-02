@@ -1,0 +1,47 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  display: flex;
+  height: 300px;
+  width: 100%;
+  > .right-block {
+    width: calc(100% - 320px);
+    position: relative;
+    flex-grow: 1;
+  }
+}
+
+.title-block {
+  height: 100%;
+  width: 130px;
+  .flag {
+    position: absolute; 
+    &:nth-child(1) {
+      left: 30px;
+      top: 20px;
+    }
+    &:nth-child(2) {
+      left: 160px;
+      top: 20px;
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  overflow: hidden;
+  width: calc(100% - 130px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 130px;
+  @include wmax1365 {
+    width: 100%;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+}

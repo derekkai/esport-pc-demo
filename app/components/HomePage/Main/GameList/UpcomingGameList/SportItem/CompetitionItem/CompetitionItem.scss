@@ -1,0 +1,90 @@
+@import '~global.css/mixin';
+
+.container {
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.title {
+  margin-left: 10px;
+  color: $primary-color-darken;
+  font-size: 14px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.text {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $primary-color-darken2;
+  text-align: center;
+}
+
+.arrow-btn {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.grid {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 20px 11px 0px;
+}
+
+.header {
+  position: sticky;
+  top: -3px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 40px;
+
+  .side {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    padding-left: 10px;
+  }
+}
+
+.content {
+  display: flex;
+  width: calc(100% - 560px);
+  height: 100%;
+
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.market-count3 > .section {
+    width: calc(100% / 3);
+  }
+
+  &.market-count2 > .section {
+    width: calc(100% / 2);
+  }
+
+  &.market-count1 > .section {
+    width: 100%;
+  }
+
+  &.market-count0 > .section {
+    display: none;
+  }
+
+  &.market-count2 > .section:nth-child(3) {
+    display: none;
+  }
+
+  &.market-count1 > .section:nth-child(n + 2) {
+    display: none;
+  }
+}
+
+
+

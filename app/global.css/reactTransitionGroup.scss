@@ -1,0 +1,281 @@
+$modals: ('BalanceHistory', 'BetHistory', 'News', 'Calculator');
+
+@each $modal in $modals {
+  .#{$modal}-enter {
+    transform: scale(0.9);
+    opacity: 0.01;
+  }
+
+  .#{$modal}-enter-active {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 300ms ease-out;
+  }
+
+  .#{$modal}-exit {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .#{$modal}-exit-active {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 300ms ease-in;
+  }
+}
+
+/* ********************************************/
+.bet-card-enter {
+  transform: translateX(-100%);
+}
+
+.bet-card-enter-active {
+  transform: translateX(0%);
+  transition: transform 300ms linear;
+}
+
+.bet-card-exit {
+  max-height: 135px;
+}
+
+.bet-card-exit-active {
+  max-height: 0px;
+  transition: max-height 300ms linear;
+}
+
+/* ********************************************/
+.top-game-enter {
+  opacity: 0.01;
+}
+
+.top-game-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.top-game-exit {
+  opacity: 1;
+}
+
+.top-game-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* ********************************************/
+.theater-enter {
+  max-height: 0;
+  transform: scale(0.9);
+  opacity: 0.1;
+}
+
+.theater-enter-active {
+  max-height: 590px;
+  transform: scale(1);
+  opacity: 1;
+  transition-timing-function: ease-in;
+  transition-duration: 300ms;
+  transition-property: max-height, opacity, transform;
+}
+
+.theater-exit {
+  max-height: 590px;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.theater-exit-active {
+  max-height: 0px;
+  transform: scale(0.9);
+  opacity: 0.1;
+  transition-timing-function: ease-out;
+  transition-duration: 300ms;
+  transition-property: max-height, opacity, transform;
+}
+
+/* ********************************************/
+.Live-enter {
+  transform: scale(0.9);
+  opacity: 0.1;
+  max-height: 0px;
+}
+
+.Live-enter-active {
+  max-height: 780px;
+  transform: scale(1);
+  opacity: 1;
+  transition-property: max-height, opacity, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+}
+
+.Live-exit {
+  max-height: 780px;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.Live-exit-active {
+  transform: scale(0.9);
+  opacity: 0.1;
+  max-height: 0px;
+  transition-property: max-height, opacity, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+/*********************************************/
+.Setting-enter {
+  height: 0px;
+  overflow: hidden;
+}
+
+.Setting-enter-active {
+  height: 155px;
+  overflow: visible;
+  transition: height .3s ease-in-out;
+}
+
+.Setting-exit {
+  height: 155px;
+  overflow: visible;
+}
+
+.Setting-exit-active {
+  height: 0px;
+  overflow: hidden;
+}
+/*********************************************/
+.MainLoading-enter {
+  opacity: 0;
+}
+
+.MainLoading-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.MainLoading-exit {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.MainLoading-exit-active {
+  opacity: 0;
+}
+/*********************************************/
+.GameList-enter {
+  opacity: 0;
+}
+
+.GameList-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.GameList-exit {
+  opacity: 0;
+}
+
+.GameList-exit-active {
+  opacity: 0;
+}
+/*********************************************/
+.Carousel-enter {
+  transform: translateY(-200%);
+  opacity: 0;
+}
+
+.Carousel-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition-property: opacity, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.Carousel-exit {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.Carousel-exit-active {
+  transform: translateY(200%);
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+/*********************************************/
+.Snackbar-enter {
+  opacity: 0;
+}
+
+.Snackbar-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.Snackbar-exit {
+  opacity: 1;
+}
+
+.Snackbar-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+/*********************************************/
+.LineItem-enter {
+  opacity: 0;
+}
+
+.LineItem-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.LineItem-exit {
+  opacity: 1;
+}
+
+.LineItem-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+/*********************************************/
+.SquareItem-enter {
+  opacity: 0;
+}
+
+.SquareItem-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.SquareItem-exit {
+  opacity: 1;
+}
+
+.SquareItem-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* ********************************************/
+.competition-item-enter {
+  opacity: 0;
+}
+
+.competition-item-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.competition-item-exit {
+  opacity: 1;
+}
+
+.competition-item-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+

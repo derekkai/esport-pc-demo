@@ -1,0 +1,48 @@
+@import 'global.css/mixin.scss';
+
+.arrow {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    height: 12px;
+    width: 12px;
+    border-width: 1px 0 0 1px;
+    border-color: $primary-color-darken2;
+    border-style: solid;
+    transform-origin: center;
+    transition: transform .3s;
+    transform: rotate(-135deg);
+    margin-top: -6px;
+  }
+
+  &.up::after {
+    transform: rotate(45deg) !important;
+    margin-top: 6px !important;
+  }
+
+  &.down::after {
+    transform: rotate(-135deg) !important;
+    margin-top: -6px !important;
+  }
+
+  &.left::after {
+    transform: rotate(-45deg) !important;
+    margin-top: 0px !important;
+  }
+
+  &.right::after {
+    transform: rotate(135deg) !important;
+    margin-top: 0px !important;
+  }
+
+  &.active::after {
+    transform: rotate(45deg);
+    margin-top: 6px;
+  }
+}

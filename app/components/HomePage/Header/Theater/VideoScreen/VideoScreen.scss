@@ -1,0 +1,98 @@
+@import 'global.css/mixin.scss'; /* stylelint-disable-line */
+
+.flag {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 223px;
+  height: 220px;
+  padding: 15px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.left {
+    margin-right: -75px;
+    background-image: url('../../../../../images/elements/img_bg_livegame_left.png');
+  }
+
+  &.right {
+    margin-left: -75px;
+    background-image: url('../../../../../images/elements/img_bg_livegame_right.png');
+  }
+
+  > .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background-image: url('../../../../../images/elements/img_bg_livegame_team.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  > .team-name {
+    display: flex;
+    align-items: center;
+    max-width: 115px;
+    height: 70px;
+    color: $word-color;
+    text-align: center;
+
+    .text {
+      @include text-max-line(3);
+
+      font-size: 16px;
+    }
+  }
+}
+
+.contianer {
+  height: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 150px;
+
+    .sport-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .competition-name {
+      margin-left: 10px;
+      color: $primary-color-darken2;
+      font-size: 14px;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    height: calc(100% - 60px);
+    padding-bottom: 60px;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  min-width: 682px;
+  height: 100%;
+  border: thin $primary-color-darken solid;
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: url('../../../../../images/elements/btn_livegame_close.png')
+      center / cover no-repeat;
+  }
+}

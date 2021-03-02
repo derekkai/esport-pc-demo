@@ -1,0 +1,77 @@
+@import 'global.css/mixin.scss';
+
+.scroll-wrapper {
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  width: 1280px;
+  height: 100%;
+}
+
+.toolbar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 0 13px;
+  flex-wrap: wrap;
+  margin-top: 3px;
+  @include wmax950 {
+    padding: 0;
+  }
+}
+
+.left-block {
+  height: 100%;
+  width: 50%;
+  padding: 0 13px;
+  min-width: 600px;
+  flex-grow: 1;
+  @include wmax950 {
+    min-width: 500px;
+    padding: 0;
+  }
+}
+
+.right-block {
+  height: 100%;
+  width: 50%;
+  padding: 0 13px;
+  min-width: 600px;
+  flex-grow: 1;
+  @include wmax950 {
+    min-width: 500px;
+    padding: 0;
+  }
+}
+
+.loading {
+  width: 90px;
+  height: 104px;
+  margin-top: 100px;
+}
+
+.navbar {
+  @include wmax950 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    > * {
+      margin: 0;
+    }
+  }
+  > * {
+    margin-left: 15px;
+  }
+}

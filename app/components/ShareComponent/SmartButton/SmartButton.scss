@@ -1,0 +1,195 @@
+@import 'global.css/mixin.scss';
+
+.container:not(.no-arrow) {
+  &.left::before {
+    left: -15px;
+    top: calc(50% - 4px);
+  }
+
+  &.right::before {
+    right: -15px;
+    top: calc(50% - 4px);
+  }
+
+  &.vertical.up::before {
+    left: calc(50% - 5px);
+    top: -10px;
+  }
+
+  &.vertical.down::before {
+    left: calc(50% - 5px);
+    bottom: -10px;
+  }
+
+  &.up::before {
+    border-color: transparent transparent $price-up-color transparent;
+    border-width: 0 5px 8px 5px;
+  }
+
+  &.down::before {
+    border-color: $price-down-color transparent transparent transparent;
+    border-width: 8px 5px 0 5px;
+  }
+
+  &::before {
+    content: '';
+    transition: border-color 0.3s linear;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px;
+    border-color: transparent transparent transparent transparent;
+    position: absolute;
+  }
+}
+
+.skin1 {
+  &-normal {
+    transition: all 0.3s ease-in-out;
+    border-image: url('../../../images/elements/btn_bg_wallet.png') 14 fill /
+      14px stretch;
+    padding: 7px 15px;
+    > span {
+      color: $word-color;
+      font-size: 14px;
+    }
+    &:hover {
+      border-image-source: url('../../../images/elements/btn_bg_wallet_h.png');
+    }
+  }
+}
+
+.skin2 {
+  width: 84px;
+  height: 40px;
+  border-image-width: 12px;
+  border-image-slice: 12 fill;
+  border-image-repeat: stretch;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  > span {
+    color: $word-color;
+    font-size: 14px;
+  }
+  &-normal {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd.png');
+  }
+  &-lock {
+    pointer-events: none;
+    cursor: none;
+    border-image-source: url('../../../images/elements/img_bg_gamelist_lock.png');
+  }
+  &-up {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd_up.png');
+  }
+  &-down {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd_down.png');
+  }
+  &-select {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd_c.png');
+  }
+}
+
+.skin3 {
+  height: 40px;
+  width: 80px;
+  border-image-width: 12px;
+  border-image-slice: 12 fill;
+  border-image-repeat: stretch;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  > span {
+    color: $primary-color-darken2;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &:not(&-select):hover {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_h.png');
+  }
+  &-up {
+    > span {
+      color: $price-up-color;
+    }
+  }
+  &-down {
+    > span {
+      color: $price-down-color;
+    }
+  }
+  &-select {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd.png');
+    > span {
+      color: $word-color;
+    }
+  }
+}
+
+.skin4 {
+  width: 84px;
+  height: 40px;
+  border-image-width: 10px;
+  border-image-slice: 10 fill;
+  border-image-repeat: stretch;
+  transition: all 0.3s ease-in-out;
+  > span {
+    color: $word-color;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &:not(&-select):not(&-lock):hover {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_hover.png');
+  }
+  &-normal {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd.png');
+  }
+  &-lock {
+    pointer-events: none;
+    cursor: none;
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_lock.png');
+  }
+  &-up {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_up.png');
+  }
+  &-down {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_down.png');
+  }
+  &-select {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_choose.png');
+  }
+}
+
+.skin5 {
+  width: 60px;
+  height: 28px;
+  border-image-width: 7px;
+  border-image-slice: 10 fill;
+  border-image-repeat: stretch;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > span {
+    font-size: 12px;
+    color: $word-color;
+  }
+  &:not(&-select):not(&-lock):hover {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_hover.png');
+  }
+  &-normal {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd.png');
+  }
+  &-lock {
+    pointer-events: none;
+    cursor: none;
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_lock.png');
+  }
+  &-up {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_up.png');
+  }
+  &-down {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_down.png');
+  }
+  &-select {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_choose.png');
+  }
+}

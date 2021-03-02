@@ -1,0 +1,141 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  > div:first-child {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    > span {
+      color: $primary-color-darken;
+      font-size: 14px;
+    }
+  }
+}
+
+.sport-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.market-name {
+  width: 120px;
+  text-align: center;
+  margin-right: calc(50% - 60px);
+  color: $primary-color-darken2;
+  font-size: 14px;
+}
+
+.vs-layout {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.middle {
+  height: 100%;
+  width: 100%;
+  //width: calc(100% - 300px);
+  display: flex;
+  align-items: center;
+}
+
+.team-icon {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  margin: 0 20px;
+  > span {
+    font-size: 20px;
+  }
+}
+
+.score-block {
+  color: $primary-color-darken;
+  font-size: 24px;
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  min-width: 100px;
+  > span:nth-child(2) {
+    margin: 0 10px;
+  }
+}
+
+.more-icon {
+  width: 15px;
+  height: 15px;
+  background: url('../../../../../../images/elements/btn_moreodds.png') center /
+    contain no-repeat;
+}
+
+
+.left {
+  font-size: 12px;
+  color: $primary-color-darken2;
+  font-weight: bold;
+  height: 100%;
+  margin: 0 0 0 20px;
+  display: flex;
+  align-items: center;
+  min-width: 60px;
+}
+
+.right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  min-width: 85px;
+}
+
+.champion-name-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  > span {
+    color: $primary-color-darken;
+  }
+}
+
+.team-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: calc((100% - 100px) / 2);
+  flex-grow: 1;
+  .flag-container {
+    margin: 0 5px;
+    min-width: 60px;
+  }
+}
+
+.team-name-container {
+  width:40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > span {
+    @include text-max-line(2);
+    text-align: center;
+    font-size: 14px;
+    color: $primary-color-darken;
+  }
+}
+
+.chip {
+  min-width: 60px;
+}

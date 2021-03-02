@@ -1,0 +1,59 @@
+@import 'global.css/mixin.scss';
+
+.header {
+  > div {
+    width: calc(100% / 4);
+  }
+  > div:nth-child(4) {
+    text-align: right;
+  }
+  > div:nth-child(2) {
+    text-align: center;
+  }
+  .chip {
+    margin-left: 10px;
+  }
+}
+
+.body {
+  > .list:first-child {
+    border-right: thin #dadada solid;
+  }
+}
+
+.list {
+  width: 50%;
+  > li {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    padding: 0 15px;
+    > div {
+      @include text-max-line(1);
+      width: 25%;
+      color: $primary-color-darken2;
+      font-size: 14px;
+      .negative {
+        color: $balanceHistory-negative-color;
+      }
+      .positive {
+        color: $balanceHistory-positive-color;
+      }
+    }
+    > div:nth-child(1) {
+      // width: 20%;
+    }
+    > div:nth-child(2) {
+      // width: 20%;
+    }
+    > div:nth-child(3) {
+      // width: 30%;
+      text-align: right;
+    }
+    > div:nth-child(4) {
+      // width: 30%;
+      text-align: right;
+    }
+  }
+}

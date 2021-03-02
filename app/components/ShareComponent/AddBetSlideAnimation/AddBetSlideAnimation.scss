@@ -1,0 +1,20 @@
+.track {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: calc(100vw - 345px);
+}
+
+.train {
+  transition-property: left, width;
+  transition-duration: 0.3s, 0.2s;
+  transition-timing-function: ease-in-out;
+  height: 100%;
+  position: absolute;
+  background: #41b1ff;
+  opacity: 0.35;
+  left: 0px;
+  top: 0px;
+  z-index: 99;
+}

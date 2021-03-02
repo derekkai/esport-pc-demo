@@ -1,0 +1,68 @@
+@import 'global.css/mixin.scss';
+
+.wrapper {
+  @include shadow(0.2);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container {
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: thin $primary-color-darken2 solid;
+}
+
+.top-block {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.navs {
+  > li {
+    width: 90px;
+    height: 100%;
+  }
+}
+
+.content {
+  width: 100%;
+  height: calc(100% - 40px);
+  > .list {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.close-btn {
+  width: 20px;
+  height: 20px;
+  background: url('../../../../../images/elements/btn_close_betlist_h.png');
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  > li {
+    display: flex;
+    align-items: center;
+    > span {
+      font-size: 14px;
+      color: $primary-color-darken;
+      margin-left: 10px;
+    }
+    > h6 {
+      font-weight: normal;
+      color: $primary-color-darken2
+    }
+  }
+}

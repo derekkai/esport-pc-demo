@@ -1,0 +1,33 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  width: 320px;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+  > .title-block {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 40px;
+  }
+  > ul {
+    margin-top: 20px;
+  }
+  &::after {
+    content: '';
+    height: calc(100% - 50px);
+    width: 1px;
+    background: $primary-color-darken;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 25px 0px;
+    opacity: 0.5;
+  }
+  @include wmax1365 {
+    display: none;
+  }
+}

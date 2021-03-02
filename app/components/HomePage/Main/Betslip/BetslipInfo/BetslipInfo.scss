@@ -1,0 +1,33 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 15px 15px 15px;
+  opacity: 1;
+  transition: opacity .3s linear .7s;
+  border-bottom: thin #bbbbbb solid;
+  border-top: thin #bbbbbb solid;
+  margin-top: -1px;
+  height: 190px;
+  > * {
+    margin-bottom: 10px;
+  }
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.place-bets-btn {
+  padding: 0 60px;
+  line-height: 1;
+  width: 260px;
+  height: 50px;
+  background: url('../../../../../images/elements/btn_betlist_sendout.png') center / contain no-repeat;
+  > span {
+    font-size: 16px;
+    color: $word-color;
+  }
+}

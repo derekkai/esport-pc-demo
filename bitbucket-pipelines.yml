@@ -1,0 +1,44 @@
+options:
+  docker: true
+
+pipelines:
+  branches:
+    "{master,beta,uat}":
+      - step:
+          script:
+            - echo "nothing to do."
+      - step:
+          image: node:10.20.0
+          trigger: manual
+          caches:
+            - nodecustom
+            - yarn
+          script: # Modify the commands below to build your repository.
+            # Generate build number
+            - BUILD_NUMBER=${BITBUCKET_BUILD_NUMBER}
+            - echo "Build number':' ${BUILD_NUMBER}"
+            # package
+            - yarn
+            - if [ ${BITBUCKET_BRANCH} = "master" ]; then yarn build:prod; fi
+            - if [ ${BITBUCKET_BRANCH} = "beta" ]; then yarn build:beta; fi
+            - if [ ${BITBUCKET_BRANCH} = "uat" ]; then yarn build:uat; fi
+            - mv build dist
+          artifacts:
+            - Dockerfile
+            - dist/**
+      - step: # push aws
+          name: Deploy to AWS ECR
+          image: anigeo/awscli
+          script:
+            - imageName=esports/$BITBUCKET_REPO_SLUG
+            - echo $imageName
+            # aws login
+            - eval $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+            # docker push
+            - export BUILD_ID=1.0.${BITBUCKET_BUILD_NUMBER}
+            - docker build -f Dockerfile -t $AWS_REGISTRY_URL/$imageName:$BUILD_ID .
+            - docker push $AWS_REGISTRY_URL/$imageName:$BUILD_ID
+definitions:
+  caches:
+    nodecustom: ./node_modules
+    yarn: /usr/local/share/.cache/yarn

@@ -1,0 +1,174 @@
+@import 'global.css/mixin.scss'; /* stylelint-disable-line */
+
+.flag {
+  display: flex;
+  align-items: center;
+  width: 192px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.left {
+    padding-right: 16px;
+    background-image: url('../../../../images/elements/img_bg_expandgame_left.png');
+  }
+
+  &.right {
+    padding-left: 16px;
+    background: url('../../../../images/elements/img_bg_expandgame_right.png');
+  }
+
+  > .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    background-image: url('../../../../images/elements/img_bg_expandgame_team.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  > .team-name {
+    @include text-max-line(3);
+
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(100% - 75px);
+    color: $word-color;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.wrapper {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1280px;
+  height: 100%;
+  @include wmax1365 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  > .loading {
+    width: 70px;
+    height: 87px;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 12px 26px;
+
+  > .left-block {
+    @extend .word-halo; /* stylelint-disable-line */
+
+    display: flex;
+    align-items: center;
+    height: 35px;
+    margin-right: auto;
+    margin-left: 14px;
+    color: $word-color;
+    font-size: 14px;
+
+    > .sport-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+    }
+
+    > .arrow-btn {
+      width: 20px;
+      height: 28px;
+      margin-right: 14px;
+      background-image: url('../../../../images/elements/btn_arrow_backpage.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .right-block {
+    z-index: 1;
+    margin-left: auto;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.team-match-block {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 100%;
+}
+
+.middle-area {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+
+  .time-block {
+    color: $word-color;
+    font-size: 14px;
+    @extend .word-halo; /* stylelint-disable-line */
+  }
+
+  .score-block {
+    display: flex;
+    margin: 10px;
+    color: $word-color;
+    font-size: 30px;
+    text-align: center;
+
+    > .divider {
+      margin: 0 15px;
+    }
+  }
+
+  .game-status-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+  }
+}
+
+.champion-name-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  color: $word-color;
+  font-size: 14px;
+  @extend .word-halo; /* stylelint-disable-line */
+  > .team-icon {
+    margin: 10px;
+  }
+}

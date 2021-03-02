@@ -1,0 +1,114 @@
+$primary-color-light: #e3f2ff !default;
+$primary-color-darken: #006dd8 !default;
+$primary-color-darken2: #3faafc !default;
+$primary-color-darken3: #7d9aaf !default;
+
+$disable-color: #999999 !default;
+$gray: #777777 !default;
+$gray2: #e1e1e1 !default;
+
+$word-color: #ffffff !default;
+
+$price-up-color: #0fb37c !default;
+$price-down-color: #f01a32 !default;
+$bet-close-color: #e05454 !default;
+
+$balanceHistory-positive-color: #0fb37c !default;
+$balanceHistory-negative-color: #f01a32 !default;
+
+$game-status-color: (
+  Won: #0fb37c,
+  Lost: #f01a32,
+  CXL: #999999,
+  Unsettled: #e1a900,
+  Returned: #e1a900,
+  Draw: #00c1d8,
+  Live: #ff9d00,
+);
+
+$betslip-status-color: (
+  success: #0eb37c,
+  fail: #ff003b,
+  loading: #006DD8,
+);
+
+$betHistory-status-color: (
+  Won: #0fb37c,
+  Lost: #f01a32,
+  NoResulted: #d8951f,
+  Cancel: #d8951f,
+  Draw: #d8951f,
+);
+
+@mixin text-max-line ($line) {
+  @if $line == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+@mixin shadow ($opacity) {
+  box-shadow: 0 0 5px 0 rgba(0, 22, 72, $opacity);
+}
+
+.word-halo {
+  text-shadow: #87cafd 0px 0 10px;
+}
+
+@mixin flex-scroll-view ($maxHeight) {
+  height: auto !important;
+  > div:first-child {
+    height: 100%;
+    position: relative !important;
+    max-height: $maxHeight;
+  }
+}
+
+@mixin wmax1430 {
+  @media screen and (max-width:1430px) {
+    @content
+  }
+};
+
+@mixin wmax1200 {
+  @media screen and (max-width:1200px) {
+    @content
+  }
+};
+
+@mixin wmax1365 {
+  @media screen and (max-width:1365px) {
+    @content
+  }
+};
+
+@mixin wmax950 {
+  @media screen and (max-width:950px) {
+    @content
+  }
+};
+
+@mixin wmax1050 {
+  @media screen and (max-width:1050px) {
+    @content
+  }
+};
+
+@mixin wmax960 {
+  @media screen and (max-width:960px) {
+    @content
+  }
+};
+
+@mixin wmin1919 {
+  @media screen and (min-width:1919px){
+    @content
+  }
+};

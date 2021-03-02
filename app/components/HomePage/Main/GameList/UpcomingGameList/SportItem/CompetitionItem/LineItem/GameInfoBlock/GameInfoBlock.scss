@@ -1,0 +1,80 @@
+@import '~global.css/mixin';
+
+.container {
+  display: flex;
+  width: 400px;
+  height: 100%;
+
+  > .side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 130px;
+    height: 100%;
+    padding-left: 30px;
+    line-height: 30px;
+
+    > .text {
+      color: $primary-color-darken2;
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: calc(100% - 130px);
+  height: 100%;
+
+  > .section {
+    height: 40px;
+
+    &:not(.draw) {
+      display: flex;
+      align-items: center;
+
+      > .icon {
+        min-width: 40px;
+        margin: 0 20px 0 25px;
+      }
+
+      > .team-score-text {
+        @include text-max-line(1);
+
+        display: block;
+        min-width: 30px;
+        color: $primary-color-darken;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      > .team-name-text {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        >.text {
+          @include text-max-line(2);
+
+          color: $primary-color-darken;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+
+    &.draw {
+      padding-left: 115px;
+      color: $primary-color-darken;
+      font-size: 14px;
+      line-height: 40px;
+    }
+  }
+}

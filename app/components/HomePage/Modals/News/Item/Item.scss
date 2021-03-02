@@ -1,0 +1,29 @@
+@import 'global.css/mixin.scss';
+
+$icons: ('system', 'activity');
+
+@each $icon in $icons {
+  .#{$icon} {
+    background-image: url('../../../../../images/elements/icon_news_#{$icon}.png');
+  }
+}
+
+.time {
+  margin-left: auto;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.content {
+  padding: 20px 50px;
+  position: absolute;
+  font-size: 14px;
+  color: $disable-color;
+}

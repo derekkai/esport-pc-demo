@@ -1,0 +1,58 @@
+@import 'global.css/mixin.scss';
+
+.list {
+  height: calc(100% - 30px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  overflow: hidden;
+  align-items: center;
+  max-width: 650px;
+  margin-left: auto;
+  > li {
+    padding: 8px 10px;
+    width: 290px;
+    height: 100px;
+    background: #00113780;
+    margin: 17.5px;
+    box-shadow: 0px 0px 5px 2px $primary-color-darken;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+  @include wmax1430 {
+    display: none;
+  }
+}
+
+.team-icon {
+  width: 30px;
+  height: 30px;
+  > span {
+    font-size: 20px;
+  }
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  > span {
+    font-size: 12px;
+    color: $primary-color-darken2;
+    margin-left: 10px;
+    @include text-max-line(1);
+    display: inline-block;
+    max-width: 160px;
+  }
+  > button {
+    margin-left: auto;
+  }
+}
+
+.title {
+  height: 20px;
+  color: $word-color;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}

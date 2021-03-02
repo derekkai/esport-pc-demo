@@ -1,0 +1,30 @@
+@import 'global.css/mixin.scss';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  min-width: 15px;
+  height: 15px;
+  min-height: 15px;
+  border: 1px $primary-color-darken2 solid;
+  cursor: pointer;
+
+  &.circle {
+    border-radius: 7px;
+
+    &.selected::after {
+      border-radius: 4px;
+    }
+  }
+  &.selected {
+    &::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: $primary-color-darken2;
+      display: block;
+    }
+  }
+}

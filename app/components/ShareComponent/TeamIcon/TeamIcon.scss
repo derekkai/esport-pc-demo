@@ -1,0 +1,65 @@
+@import 'global.css/mixin.scss';
+
+.wrapper {
+  position: relative;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.default-icon {
+  width: 100%;
+  height: 100%;
+  background: url('../../../images/elements/img_teamlogo_noshow.png') center / cover no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > span {
+    color: $word-color;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.medium {
+  width: 60px;
+  height: 60px;
+  span {
+    font-size: 26px;
+  }
+}
+
+.small {
+  width: 40px;
+  height: 40px;
+  span {
+    font-size: 18px;
+  }
+}
+
+.large {
+  width: 90px;
+  height: 90px;
+  span {
+    font-size: 36px;
+  }
+}
+
+.hide {
+  display: none;
+}

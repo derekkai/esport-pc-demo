@@ -1,0 +1,32 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  line-height: 15px;
+  > span {
+    font-size: 14px;
+    color: $primary-color-darken2;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &.dark {
+    > span {
+      color: $word-color;
+      @extend .word-halo;
+    }
+    .video-tag {
+      background: rgba(200, 116, 24, 0.6);
+      border: thin #ff9000 solid;
+    }
+  }
+}
+
+.video-tag {
+  width: 60px;
+  height: 25px;
+  font-size: 14px;
+  color: $word-color;
+  background: #ff9c00;
+  border: thin #ff6c00 solid;
+  text-align: center;
+  line-height: 23px;
+}

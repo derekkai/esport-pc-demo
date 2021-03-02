@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: height .3s ease-in-out;
+  overflow: hidden;
+  &.collapse {
+    height: 0px;
+  }
+  &.game {
+    height: 300px;
+  }
+  &.market {
+    height: 230px;
+  }
+  .main-bg {
+    transition: background-image .3s ease-in-out;
+    background-position: right top;
+    background-size: auto 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: calc(100%);
+    width: 100%;
+    min-width: 1650px;
+  }
+  .market-bg {
+  
+    background-position: right top;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: calc(100% + 0px);
+    width: 100%;
+  }
+}
+

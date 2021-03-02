@@ -1,0 +1,52 @@
+@import '~global.css/mixin';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+
+  > .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+
+  > .draw {
+    color: $primary-color-darken2;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.container {
+  display: flex;
+  width: calc(100% - 560px);
+
+  &.market-count3 > .section {
+    width: calc(100% / 3);
+  }
+
+  &.market-count2 > .section {
+    width: calc(100% / 2);
+  }
+
+  &.market-count1 > .section {
+    width: calc(100% / 1);
+  }
+
+  &.market-count0 > .section {
+    display: none;
+  }
+
+  &.market-count2 > .section:nth-child(3) {
+    display: none;
+  }
+
+  &.market-count1  > .section:nth-child(n + 2) {
+    display: none;
+  }
+}
+
+

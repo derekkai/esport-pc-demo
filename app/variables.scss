@@ -1,0 +1,32 @@
+$color-darken:#006dd8 !default;
+$color-light:  #3faafc !default;
+$color-primary: #036fd9 !default;
+$color-primary2: #0774dc !default;
+$color-primary3: #8ccdfe !default;
+$color-primary4: #004c9b !default;
+$color-primary5: #d9eeff !default;
+$color-primary6:#5eb8fc !default;
+
+$color-red: #ff4b13 !default;
+$color-error: #c30000 !default;
+
+$color-green: #1ac02e !default;
+$color-select: #009e13 !default;
+
+$color-highlight: #00E1E9 !default;
+
+.word-light {
+  color: $color-light;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.word-darken {
+  color: $color-darken;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}

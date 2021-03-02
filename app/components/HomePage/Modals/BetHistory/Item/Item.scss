@@ -1,0 +1,95 @@
+@import 'global.css/mixin.scss';
+
+$states: ('Won', 'Lost', 'NoResulted', 'Cancel', 'Draw');
+
+@each $state in $states {
+  .#{$state} {
+    color: map-get($betHistory-status-color , $state);
+  }
+}
+
+.header {
+  justify-content: space-between;
+
+  > div:nth-child(1) {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > div:nth-child(1) {
+      text-align: left;
+      width: 170px;
+    }
+    > div:nth-child(2) {
+      @include text-max-line(1);
+      width: 80px;
+      text-align: center;
+    }
+  }
+  > div:nth-child(2) {
+    @include text-max-line(1);
+    width: 170px;
+    text-align: left;
+  }
+  > div:nth-child(3) {
+    @include text-max-line(1);
+    width: 170px;
+  }
+  > div:nth-child(4) {
+    @include text-max-line(1);
+    width: 170px;
+  }
+  > div:nth-child(5) {
+    width: 100px;
+    display: inline-flex;
+    > * {
+      margin-left: auto;
+    }
+  }
+}
+
+.sport-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.list {
+  width: 100%;
+  > li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 86px 0 16px;
+    font-size: 14px;
+    > div:nth-child(1) {
+      width: 30%;
+      color: $primary-color-darken;
+      display: flex;
+      > span {
+        @include text-max-line(1);
+      }
+    }
+    > div:nth-child(2) {
+      @include text-max-line(1);
+      width: 170px;
+      color: $primary-color-darken2;
+    }
+    > div:nth-child(3) {
+      @include text-max-line(1);
+      width: 170px;
+      color: $primary-color-darken;
+    }
+    > div:nth-child(4) {
+      @include text-max-line(1);
+      width: 170px;
+      color: $primary-color-darken2;
+    }
+    > div:nth-child(5) {
+      @include text-max-line(1);
+      width: 100px;
+      text-align: right;
+    }
+  }
+}

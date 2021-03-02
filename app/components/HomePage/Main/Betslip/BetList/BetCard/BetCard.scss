@@ -1,0 +1,118 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: thin #bbbbbb solid;
+  &:hover {
+    background: $primary-color-light;
+  }
+  &.close {
+    background: lighten($disable-color, 25%);
+    .close-btn {
+      background-image: url('../../../../../../images/elements/btn_close_betlist_cancel.png') !important;
+    }
+    .warning-icon {
+      margin-right: 5px;
+      width: 17px;
+      height: 17px;
+      background: url('../../../../../../images/elements/icon_betslip_note.png')
+        center / contain no-repeat;
+    }
+    .wraning-text {
+      font-size: 14px;
+      color: $bet-close-color;
+    }
+    .market-name {
+      color: $disable-color;
+    }
+    .pick-event-name {
+      color: $disable-color;
+    }
+    &::before,
+    &::after {
+      border-color: $bet-close-color;
+    }
+    > div {
+      &::before,
+      &::after {
+        border-color: $bet-close-color;
+      }
+    }
+  }
+}
+
+.top-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .sport-icon {
+    width: 15px;
+    height: 15px;
+    path {
+      fill: $primary-color-darken2;
+    }
+  }
+  > .close-btn {
+    width: 20px;
+    height: 20px;
+    background: url('../../../../../../images/elements/btn_close_betlist_h.png')
+      center / contain no-repeat;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  > .bet-name {
+    @include text-max-line(1);
+    margin-left: 5px;
+    color: $primary-color-darken2;
+    font-size: 14px;
+    display: inline-block;
+    max-width: calc(100% - 40px);
+  }
+}
+
+.middle-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > .market-name {
+    color: $primary-color-darken2;
+    font-size: 14px;
+  }
+  .prev-price {
+    color: $primary-color-darken2;
+    font-size: 14px;
+  }
+  > .strikethrough {
+    font-size: 16px;
+    text-decoration: line-through;
+  }
+}
+
+.bottom-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .pick-event-name {
+    color: $primary-color-darken;
+    font-size: 14px;
+  }
+  .price {
+    color: $primary-color-darken;
+    font-size: 16px;
+    &.increase {
+      color: $price-up-color;
+    }
+    &.decrease {
+      color: $price-down-color;
+    }
+  }
+}
+
+.input-area {
+  width: 100%;
+  margin-top: 8px;
+}

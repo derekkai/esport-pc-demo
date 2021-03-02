@@ -1,0 +1,152 @@
+@import 'global.css/mixin.scss'; /* stylelint-disable-line */
+
+$bet-states: ('won', 'lost', 'returned');
+
+@each $betState in $bet-states {
+  .#{$betState} {
+    background-image: url('../../../images/elements/icon_calculator_#{$betState}.png');
+  }
+}
+
+.container {
+  @include shadow(0.2);
+
+  position: absolute;
+  top: calc(50vh - 250px);
+  left: calc(50vw - 150px);
+  z-index: 99;
+  width: 300px;
+  padding: 6px;
+  background: #fff;
+  border: thin $primary-color-darken2 solid;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    color: $primary-color-darken2;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    > .close-btn {
+      width: 20px;
+      height: 20px;
+      background-image: url('../../../images/elements/btn_close_betlist_h.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .body {
+    padding: 20px 16px;
+    border-top: thin $primary-color-darken2 solid;
+    border-bottom: thin $primary-color-darken2 solid;
+
+    > .select {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer {
+    padding: 20px 16px;
+
+    .reset-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 30px;
+      margin-top: 15px;
+      color: $primary-color-darken;
+      font-size: 14px;
+      text-transform: uppercase;
+      background: $primary-color-light;
+      border: thin $primary-color-darken2 solid;
+    }
+  }
+}
+
+.list {
+  margin-right: 12px;
+
+  > .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    >.id {
+      display: block;
+      width: 50px;
+      color: $disable-color;
+      font-size: 14px;
+    }
+
+    >.input {
+      flex-grow: 1;
+      width: 100%;
+      height: 20px;
+      padding: 0 5px;
+      color: $disable-color;
+      font-size: 14px;
+      border: thin $disable-color solid;
+    }
+
+    > .checkbox {
+      margin-left: 20px;
+    }
+  }
+}
+
+.table {
+  margin-top: 20px;
+
+  .table-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+
+    > .icon {
+      width: 16px;
+      height: 16px;
+      margin-left: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    > .side {
+      flex-grow: 1;
+      width: 1px;
+      height: 16px;
+      margin-left: 20px;
+      color: $primary-color-darken2;
+      font-size: 14px;
+    }
+  }
+
+  .table-body {
+    width: calc(100% + 12px);
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+
+  > .label {
+    color: $disable-color;
+  }
+
+  > .value {
+    color: $primary-color-darken;
+  }
+}

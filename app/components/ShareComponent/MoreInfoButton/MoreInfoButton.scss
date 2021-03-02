@@ -1,0 +1,35 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  > span {
+    color: $primary-color-darken2;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  &.disable {
+    pointer-events: none;
+    > span {
+      color: $disable-color;
+    }
+    .more-icon {
+      background-image: url('../../../images/elements/btn_moreodds_b.png');
+    }
+  }
+}
+
+.video-icon {
+  width: 15px;
+  height: 15px;
+  background: url('../../../images/elements/btn_watch_live.png') center / contain
+    no-repeat;
+}
+
+.more-icon {
+  width: 15px;
+  height: 15px;
+  background: url('../../../images/elements/btn_moreodds.png') center / contain
+    no-repeat;
+}

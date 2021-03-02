@@ -1,0 +1,68 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  width: 120px;
+  height: auto;
+  position: relative;
+  > button {
+    border: thin $primary-color-darken2 solid;
+    background: $primary-color-light;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 25px;
+    > span {
+      font-size: 14px;
+      color: $primary-color-darken;
+    }
+    .arrow {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: $primary-color-darken transparent transparent transparent;
+    }
+  }
+}
+
+.menu-wrapper {
+  border: thin $primary-color-darken2 solid;
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  z-index: 1;
+  border-top: none;
+  background: #ffffff;
+  width: 100%;
+}
+
+.menu {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.option {
+  width: calc(100%);
+  height: 30px;
+  padding-left: 10px;
+  border-top: thin transparent solid;
+  border-bottom: thin transparent solid;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  &:hover {
+    border-color: $primary-color-darken2;
+    background-color: $primary-color-light;
+  }
+  > span {
+    font-size: 14px;
+    color: $primary-color-darken2;
+  }
+  &.active {
+    border-color: $primary-color-darken2;
+    background-color: $primary-color-light;
+    pointer-events: none;
+  }
+}

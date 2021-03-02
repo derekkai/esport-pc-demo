@@ -1,0 +1,8 @@
+.container {
+  position: fixed;
+  right: auto;
+  bottom: 24px;
+  left: 50%;
+  z-index: 9999;
+  transform: translateX(-50%);
+}

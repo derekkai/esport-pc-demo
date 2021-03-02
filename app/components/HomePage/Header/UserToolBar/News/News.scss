@@ -1,0 +1,27 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  @include text-max-line(1);
+  color: $disable-color;
+  font-size: 14px;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+}
+
+.tag {
+  margin-right: 10px;
+  min-width: 10px;
+  height: 15px;
+  background: url('../../../../../images/elements/icon_news_title.png') center / cover no-repeat;
+}
+
+.content {
+  @include text-max-line(1);
+  margin-left: 5px;
+  position: absolute;
+  left: 80px;
+}

@@ -1,0 +1,22 @@
+@import 'global.css/mixin.scss';
+
+.input {
+  height: 30px;
+    width: 100%;
+    border: thin $disable-color solid;
+    background: transparent;
+    color: $disable-color;
+    padding-left: 10px;
+    font-size: 14px;
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      opacity: 1; /* Firefox */
+    }
+    
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      opacity: 1;
+    }
+    
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      opacity: 1;
+    }
+}

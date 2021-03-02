@@ -1,0 +1,29 @@
+@import "~global.css/mixin";
+
+.container {
+  width: 430px;
+  height: 340px;
+}
+
+.header {
+  justify-content: center;
+}
+
+.icon {
+  margin-bottom: 20px;
+  width: 130px;
+  height: 135px;
+  background: url('../../../../images/elements/icon_offline.png') center / cover no-repeat;
+}
+
+.text {
+  font-size: 18px;
+  color: $primary-color-darken;
+}
+
+.content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,30 @@
+@import 'global.css/mixin.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  color: #3da6f6;
+  font-size: 12px;
+  margin-left: 10px;
+  height: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.radio-btn {
+  margin-right: 5px;
+}
+
+.name {
+  @include text-max-line(1);
+  margin-right: 5px;
+  flex-grow: 1;
+  width: 1px;
+}
+
+.count {
+  margin-left: auto;
+  display: block;
+  min-width: 35px;
+  text-align: right;
+}

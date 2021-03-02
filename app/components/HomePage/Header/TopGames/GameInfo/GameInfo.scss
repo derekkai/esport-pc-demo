@@ -1,0 +1,170 @@
+@import 'global.css/mixin.scss'; /* stylelint-disable-line */
+
+.flag {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 157px;
+  height: 155px;
+  padding: 15px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &.left {
+    background-image: url('../../../../../images/elements/img_bg_maingame_left.png');
+  }
+
+  &.right {
+    padding-left: 16px;
+    background-image: url('../../../../../images/elements/img_bg_maingame_right.png');
+  }
+
+  > .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-image: url('../../../../../images/elements/img_bg_maingame_team.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  > .team-name {
+    display: flex;
+    align-items: center;
+    max-width: 115px;
+    height: 42px;
+    color: $word-color;
+
+    > .text {
+      @include text-max-line(2);
+
+      color: $word-color;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+.body {
+  .top {
+    display: flex;
+    color: $primary-color-darken2;
+    font-size: 14px;
+
+    .sport-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+
+  .middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    color: $primary-color-darken2;
+    font-size: 14px;
+
+    > .mini-score {
+      margin-left: 10px;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 700px;
+  height: 100%;
+  margin-right: 30px;
+  @include wmax1365 {
+    margin-right: 0;
+  }
+
+  .middle-area {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-right: -45px;
+    margin-left: -45px;
+    padding: 10px;
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 155px;
+      padding: 15px 36px;
+    }
+
+    .footer {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: calc((100% - 155px) / 2);
+      padding: 0 36px;
+      color: $primary-color-darken2;
+      font-size: 14px;
+    }
+  }
+
+  .score-bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 155px;
+  }
+}
+
+.header {
+  .title {
+    margin-bottom: 14px;
+    padding: 2px 14px;
+    color: $word-color;
+    font-size: 14px;
+    box-shadow: inset 0 0 5px 2px $primary-color-darken2;
+  }
+}
+
+
+.score {
+  display: flex;
+  color: $word-color;
+  font-size: 29px;
+  > .team1-score {
+    display: inline-block;
+    width: 55px;
+    text-align: right;
+  }
+
+  > .divider {
+    margin: 0 15px;
+  }
+
+  > .team2-score {
+    display: inline-block;
+    width: 55px;
+    text-align: left;
+  }
+}
